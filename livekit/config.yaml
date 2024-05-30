@@ -1,0 +1,18 @@
+# This config contains only the bare minimum for enabling the LiveKit AVClient in Foundry.
+# For more options, see the config-sample.yaml at LiveKit's GitHub page.
+# https://github.com/livekit/livekit/blob/master/config-sample.yaml
+
+# Main TCP port for RoomService and RTC endpoint
+port: 7880
+
+# WebRTC configuration
+rtc:
+  # UDP ports to use for client traffic.
+  # This port range should be open for inbound traffic on the firewall
+  port_range_start: 50000
+  port_range_end: 60000
+
+# API key / secret pairs.
+# Generate a new key with: nix-shell -p livekit --command "livekit-server generate-keys"
+keys:
+  APIK3uPJN4qGHbU: ZuJTQ.....XU0agP
