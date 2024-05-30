@@ -41,6 +41,7 @@
         reverse_proxy http://localhost:7880 {
           transport http {
             keepalive 10s
+          }
         }
       }
     '';
