@@ -54,3 +54,4 @@ Caddy will take care of setting up and updating an SSL certificate automatically
     ```
 
 1. Lastly, when configuring your Foundry server, be sure to install the [LiveKit AVClient module](https://github.com/bekriebel/fvtt-module-avclient-livekit?tab=readme-ov-file#installation) and enable it to use LiveKit instead of the built-in A/V client.
+The **LiveKit Server Address** will be `your-domain.tld/livekit`.
