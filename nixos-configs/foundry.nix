@@ -18,7 +18,7 @@
     serviceConfig = {
       Type = "simple";
       RuntimeDirectory = "/opt/foundry/vtt";
-      ExecStart = "${pkgs.nodejs_18}/bin/node /opt/foundry/vtt/resources/app/main.js --dataPath=/opt/foundry/data";
+      ExecStart = "${pkgs.nodejs_20}/bin/node /opt/foundry/vtt/resources/app/main.js --dataPath=/opt/foundry/data";
       Restart = "always";
     };
     wantedBy = [ "multi-user.target" ];
