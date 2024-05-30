@@ -26,13 +26,22 @@
       }
 
       # Send it to the backend
-      reverse_proxy http://localhost:30000 {
-        transport http {
-          keepalive 10s
+      route /* {
+        reverse_proxy http://localhost:30000 {
+          transport http {
+            keepalive 10s
+          }
+          # Set ip for logs
+          header_up X-Real-IP {remote_host}
         }
+      }
 
-        # Set ip for logs
-        header_up X-Real-IP {remote_host}
+      route /livekit* {
+        uri strip_prefix /livekit
+        reverse_proxy http://localhost:7880 {
+          transport http {
+            keepalive 10s
+        }
       }
     '';
   };
